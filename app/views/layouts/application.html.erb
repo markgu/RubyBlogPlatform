@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div style="background: lightblue">
+  <ul>
+    <li> <%= link_to "Recent Tweets" , :recent_tweets  %> </li>
+    <li> <%= link_to "users" , :users  %> </li>
+    <li> <%= link_to "tweets", :tweets  %> </li>
+  </ul>
+</div>
+
+
+
+<% if flash[:notice] %>
+<div id="notice"> <%= flash[:notice] %> </div>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

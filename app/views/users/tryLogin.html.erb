@@ -1,0 +1,10 @@
+<h1>Login with UserId and Password</h1>
+
+<%= form_for(@user, action_name: :login)  do  |f| %>
+UserId   : <%= f.text_field :userId %>
+Password : <%= f.text_field :password %>
+<%= f.submit %>
+
+<% end %>
+
+<%= link_to 'Back', users_path %>
